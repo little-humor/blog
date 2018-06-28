@@ -625,6 +625,30 @@
 
 
 
+<!-- LOCAL: You can save these files to your site and update links -->
+  
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<!-- END LOCAL -->
+    
+      <script type="text/javascript">
+      function renderGitalk(){
+        var gitalk = new Gitalk({
+            owner: 'guxingyin@live.cn',
+            repo: 'https://github.com/little-humor/little-humor.github.io.git',
+            clientID: '9bd76c12a6eeaf610204',
+            clientSecret: '7c3e6769e003ac53845d678528743b64db55876d',
+            admin: 'little-humor',
+            
+              distractionFreeMode: 'true# Facebook-like distraction free mode'
+            
+            });
+        gitalk.render('gitalk-container');
+      }
+      renderGitalk();
+      </script>
+    
+
 
 
 

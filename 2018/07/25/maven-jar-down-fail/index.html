@@ -125,21 +125,18 @@
 
 
 
-<meta name="description" content="maven下载依赖jar包失败的解决方案 第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载当我们使用eclipse下载jar包，有事突然退出，再次进入jar包还是下载不起  可能的原因就是 maven没有将jar下载完时，会生成一个.lastupdate文件  解决方法： 使用文件搜索工具（eg：Everything） 输入.lastupdate删除所有">
+<meta name="description" content="maven下载依赖jar包失败的解决方案 ###第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载 当我们使用eclipse下载jar包，有事突然退出，再次进入jar包还是下载不起  可能的原因就是 maven没有将jar下载完时，会生成一个.lastupdate文件  解决方法： 使用文件搜索工具（eg：Everything） 输入.lastupdate">
 <meta name="keywords" content="maven">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Maven 依赖jar包下载失败解决方案">
 <meta property="og:url" content="http://baidu.com/2018/07/25/maven-jar-down-fail/index.html">
 <meta property="og:site_name" content="Little Humor">
-<meta property="og:description" content="maven下载依赖jar包失败的解决方案 第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载当我们使用eclipse下载jar包，有事突然退出，再次进入jar包还是下载不起  可能的原因就是 maven没有将jar下载完时，会生成一个.lastupdate文件  解决方法： 使用文件搜索工具（eg：Everything） 输入.lastupdate删除所有">
+<meta property="og:description" content="maven下载依赖jar包失败的解决方案 ###第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载 当我们使用eclipse下载jar包，有事突然退出，再次进入jar包还是下载不起  可能的原因就是 maven没有将jar下载完时，会生成一个.lastupdate文件  解决方法： 使用文件搜索工具（eg：Everything） 输入.lastupdate">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://www.blogjava.net/Images/OutliningIndicators/None.gif">
-<meta property="og:image" content="http://www.blogjava.net/Images/OutliningIndicators/None.gif">
-<meta property="og:updated_time" content="2018-07-25T10:04:31.521Z">
+<meta property="og:updated_time" content="2018-07-25T10:10:45.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Maven 依赖jar包下载失败解决方案">
-<meta name="twitter:description" content="maven下载依赖jar包失败的解决方案 第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载当我们使用eclipse下载jar包，有事突然退出，再次进入jar包还是下载不起  可能的原因就是 maven没有将jar下载完时，会生成一个.lastupdate文件  解决方法： 使用文件搜索工具（eg：Everything） 输入.lastupdate删除所有">
-<meta name="twitter:image" content="http://www.blogjava.net/Images/OutliningIndicators/None.gif">
+<meta name="twitter:description" content="maven下载依赖jar包失败的解决方案 ###第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载 当我们使用eclipse下载jar包，有事突然退出，再次进入jar包还是下载不起  可能的原因就是 maven没有将jar下载完时，会生成一个.lastupdate文件  解决方法： 使用文件搜索工具（eg：Everything） 输入.lastupdate">
 
 
 
@@ -359,7 +356,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  327
+                  329
                 </span>
               
 
@@ -397,14 +394,16 @@
 
       
         <p>maven下载依赖jar包失败的解决方案</p>
-<h3 id="第一个方法：删除本地的-repository库中所有-lastupdate后缀文件，重新下载"><a href="#第一个方法：删除本地的-repository库中所有-lastupdate后缀文件，重新下载" class="headerlink" title="第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载"></a>第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载</h3><pre><code>当我们使用eclipse下载jar包，有事突然退出，再次进入jar包还是下载不起
+<p>###第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载</p>
+<pre><code>当我们使用eclipse下载jar包，有事突然退出，再次进入jar包还是下载不起
 
 可能的原因就是 maven没有将jar下载完时，会生成一个.lastupdate文件
 
 解决方法： 使用文件搜索工具（eg：Everything） 输入.lastupdate删除所有以.lastupdate结尾的文件。然后简单修改.pom(比如加空格) 保存，然后eclipse就会重新下载jar包！
-</code></pre><h3 id="第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings-xml"><a href="#第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings-xml" class="headerlink" title="第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings.xml"></a>第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings.xml</h3><h5 id="在-mirrors中增加"><a href="#在-mirrors中增加" class="headerlink" title="在 mirrors中增加"></a>在 mirrors中增加</h5><mirrors>  
+</code></pre><p>###第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings.xml</p>
+<h5 id="在-mirrors中增加"><a href="#在-mirrors中增加" class="headerlink" title="在 mirrors中增加"></a>在 mirrors中增加</h5><pre><code>&lt;mirrors&gt;  
 
-<pre><code>&lt;mirror&gt;  
+  &lt;mirror&gt;  
        &lt;id&gt;ibiblio.org&lt;/id&gt;  
         &lt;name&gt;ibiblio Mirror of http://repo1.maven.org/maven2/&lt;/name&gt;  
         &lt;url&gt;http://mirrors.ibiblio.org/pub/mirrors/maven2&lt;/url&gt;  
@@ -417,11 +416,11 @@
       &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;  
       &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;  
   &lt;/mirror&gt;  
-</code></pre><p>   </p></mirrors>  <p></p>
-<p>添加保存后，重新编辑pom文件，加个空格什么的，能下载部分jar包，还是有一些jar不能下载</p>
-<h3 id="第三个办法：拷贝相应jar，手动导入本地库"><a href="#第三个办法：拷贝相应jar，手动导入本地库" class="headerlink" title="第三个办法：拷贝相应jar，手动导入本地库"></a>第三个办法：拷贝相应jar，手动导入本地库</h3><p><img src="http://www.blogjava.net/Images/OutliningIndicators/None.gif" alt="img"><dependency><br>    <groupid>org.springframework.cloud</groupid><br>    <artifactid>spring-cloud-starter-config</artifactid><br>    <version>1.4.4.RELEASE</version><br></dependency></p>
+&lt;/mirrors&gt;
+</code></pre><p>添加保存后，重新编辑pom文件，加个空格什么的，能下载部分jar包，还是有一些jar不能下载</p>
+<p>###第三个办法：拷贝相应jar，手动导入本地库<br>          <dependency><br>              <groupid>org.springframework.cloud</groupid><br>              <artifactid>spring-cloud-starter-config</artifactid><br>              <version>1.4.4.RELEASE</version><br>          </dependency></p>
 <p>Maven 安装 JAR 包的命令是：</p>
-<p><img src="http://www.blogjava.net/Images/OutliningIndicators/None.gif" alt="img">mvn install:install-file -Dfile=jar包的位置 -DgroupId=上面的groupId -DartifactId=上面的artifactId -Dversion=上面的version -Dpackaging=jar</p>
+<p>mvn install:install-file -Dfile=jar包的位置 -DgroupId=上面的groupId -DartifactId=上面的artifactId -Dversion=上面的version -Dpackaging=jar</p>
 
       
     </div>
@@ -738,7 +737,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个方法：删除本地的-repository库中所有-lastupdate后缀文件，重新下载"><span class="nav-number">1.</span> <span class="nav-text">第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings-xml"><span class="nav-number">2.</span> <span class="nav-text">第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings.xml</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在-mirrors中增加"><span class="nav-number">2.0.1.</span> <span class="nav-text">在 mirrors中增加</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三个办法：拷贝相应jar，手动导入本地库"><span class="nav-number">3.</span> <span class="nav-text">第三个办法：拷贝相应jar，手动导入本地库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#在-mirrors中增加"><span class="nav-number">1.</span> <span class="nav-text">在 mirrors中增加</span></a></li></ol></div>
             
 
           </div>

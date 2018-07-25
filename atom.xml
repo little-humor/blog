@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baidu.com/"/>
-  <updated>2018-07-23T07:22:54.537Z</updated>
+  <updated>2018-07-25T10:04:31.521Z</updated>
   <id>http://baidu.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Maven 依赖jar包下载失败解决方案</title>
+    <link href="http://baidu.com/2018/07/25/maven-jar-down-fail/"/>
+    <id>http://baidu.com/2018/07/25/maven-jar-down-fail/</id>
+    <published>2018-07-25T09:59:56.000Z</published>
+    <updated>2018-07-25T10:04:31.521Z</updated>
+    
+    <content type="html"><![CDATA[<p>maven下载依赖jar包失败的解决方案</p><h3 id="第一个方法：删除本地的-repository库中所有-lastupdate后缀文件，重新下载"><a href="#第一个方法：删除本地的-repository库中所有-lastupdate后缀文件，重新下载" class="headerlink" title="第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载"></a>第一个方法：删除本地的\repository库中所有.lastupdate后缀文件，重新下载</h3><pre><code>当我们使用eclipse下载jar包，有事突然退出，再次进入jar包还是下载不起可能的原因就是 maven没有将jar下载完时，会生成一个.lastupdate文件解决方法： 使用文件搜索工具（eg：Everything） 输入.lastupdate删除所有以.lastupdate结尾的文件。然后简单修改.pom(比如加空格) 保存，然后eclipse就会重新下载jar包！</code></pre><h3 id="第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings-xml"><a href="#第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings-xml" class="headerlink" title="第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings.xml"></a>第二个办法：maven添加镜像地址，编辑maven根目录中conf文件夹下settings.xml</h3><h5 id="在-mirrors中增加"><a href="#在-mirrors中增加" class="headerlink" title="在 mirrors中增加"></a>在 mirrors中增加</h5><mirrors>  <pre><code>&lt;mirror&gt;         &lt;id&gt;ibiblio.org&lt;/id&gt;          &lt;name&gt;ibiblio Mirror of http://repo1.maven.org/maven2/&lt;/name&gt;          &lt;url&gt;http://mirrors.ibiblio.org/pub/mirrors/maven2&lt;/url&gt;          &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;          &lt;!-- United States, North Carolina --&gt;    &lt;/mirror&gt;    &lt;mirror&gt;        &lt;id&gt;jboss-public-repository-group&lt;/id&gt;        &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;        &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;        &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;    &lt;/mirror&gt;  </code></pre><p>   </p></mirrors>  <p></p><p>添加保存后，重新编辑pom文件，加个空格什么的，能下载部分jar包，还是有一些jar不能下载</p><h3 id="第三个办法：拷贝相应jar，手动导入本地库"><a href="#第三个办法：拷贝相应jar，手动导入本地库" class="headerlink" title="第三个办法：拷贝相应jar，手动导入本地库"></a>第三个办法：拷贝相应jar，手动导入本地库</h3><p><img src="http://www.blogjava.net/Images/OutliningIndicators/None.gif" alt="img"><dependency><br>    <groupid>org.springframework.cloud</groupid><br>    <artifactid>spring-cloud-starter-config</artifactid><br>    <version>1.4.4.RELEASE</version><br></dependency></p><p>Maven 安装 JAR 包的命令是：</p><p><img src="http://www.blogjava.net/Images/OutliningIndicators/None.gif" alt="img">mvn install:install-file -Dfile=jar包的位置 -DgroupId=上面的groupId -DartifactId=上面的artifactId -Dversion=上面的version -Dpackaging=jar</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;maven下载依赖jar包失败的解决方案&lt;/p&gt;
+&lt;h3 id=&quot;第一个方法：删除本地的-repository库中所有-lastupdate后缀文件，重新下载&quot;&gt;&lt;a href=&quot;#第一个方法：删除本地的-repository库中所有-lastupdate后缀文件，重新下载
+      
+    
+    </summary>
+    
+    
+      <category term="maven" scheme="http://baidu.com/tags/maven/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring Boot与Spring Cloud版本对照</title>
